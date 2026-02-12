@@ -18,18 +18,18 @@ export default function Navbar() {
         scrolled ? "bg-white shadow-md" : "bg-transparent"
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-8">
         <a
           href="#"
-          className={`text-2xl font-bold tracking-wide ${
+          className={`font-heading text-2xl font-normal tracking-wide ${
             scrolled ? "text-secondary" : "text-white"
           }`}
         >
           Panto
         </a>
 
-        {/* Desktop Nav */}
-        <ul className="hidden items-center gap-8 md:flex">
+        {/* Desktop Nav - centered */}
+        <ul className="hidden items-center gap-10 md:flex">
           {[
             { label: "Furniture", href: "#products" },
             { label: "Shop", href: "#products" },

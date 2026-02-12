@@ -21,12 +21,6 @@ const testimonials = [
     text: "I always recommend Panto to my clients. Their attention to detail and commitment to quality materials sets them apart from the competition.",
     color: "#5a3a2a",
   },
-  {
-    name: "David Park",
-    role: "Business Owner",
-    text: "Furnished my entire office with Panto. The modern aesthetic and durability of their products are unmatched. Great value for the price.",
-    color: "#A0522D",
-  },
 ];
 
 export default function Testimonials() {
@@ -35,21 +29,21 @@ export default function Testimonials() {
   return (
     <section className="bg-white py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mb-12 text-center">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary">
+        <div className="mb-14 text-center">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-primary">
             Testimonials
           </p>
-          <h2 className="text-3xl font-bold text-secondary md:text-4xl">
+          <h2 className="font-heading text-3xl font-normal text-secondary md:text-4xl">
             What our customers say
           </h2>
         </div>
 
         {/* Cards */}
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {testimonials.slice(0, 3).map((t, i) => (
+          {testimonials.map((t, i) => (
             <div
               key={t.name}
-              className={`rounded-2xl border p-6 transition-all ${
+              className={`rounded-2xl border p-6 transition-all cursor-pointer ${
                 active === i
                   ? "border-primary bg-primary/5 shadow-md"
                   : "border-gray-100 bg-white shadow-sm hover:shadow-md"
@@ -63,7 +57,7 @@ export default function Testimonials() {
               {/* Avatar */}
               <div className="mb-4 flex items-center gap-3">
                 <div
-                  className="flex h-12 w-12 items-center justify-center rounded-full text-lg font-bold text-white"
+                  className="flex h-11 w-11 items-center justify-center rounded-full text-base font-bold text-white"
                   style={{ backgroundColor: t.color }}
                 >
                   {t.name.charAt(0)}
@@ -77,14 +71,14 @@ export default function Testimonials() {
               </div>
 
               {/* Stars */}
-              <div className="mb-3 flex gap-1">
+              <div className="mb-3 flex gap-0.5">
                 {[1, 2, 3, 4, 5].map((star) => (
                   <svg
                     key={star}
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="#E58411"
-                    className="h-4 w-4"
+                    className="h-3.5 w-3.5"
                   >
                     <path
                       fillRule="evenodd"
@@ -102,7 +96,7 @@ export default function Testimonials() {
 
         {/* Dots */}
         <div className="mt-8 flex justify-center gap-2">
-          {testimonials.slice(0, 3).map((_, i) => (
+          {testimonials.map((_, i) => (
             <button
               key={i}
               aria-label={`Go to testimonial ${i + 1}`}
