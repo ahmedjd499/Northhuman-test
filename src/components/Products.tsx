@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
+import { useCart } from "@/context/CartContext";
 
 const products = [
   {
@@ -116,6 +117,7 @@ function StarRating({ rating }: { rating: number }) {
 export default function Products() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [perView, setPerView] = useState(4);
+  const { addToCart } = useCart();
 
   useEffect(() => {
     const updatePerView = () => {
@@ -230,9 +232,18 @@ export default function Products() {
                       </p>
                       <button
                         aria-label={`Add ${product.name}`}
-                        className="inline-flex h-10 w-10 items-center justify-center rounded-full text-white"
+                        className="inline-flex h-10 w-10 items-center justify-center rounded-full text-white hover:opacity-90 transition-opacity cursor-pointer"
                         style={{ backgroundColor: "#0D1B39" }}
                         type="button"
+                        onClick={() =>
+                          addToCart({
+                            name: product.name,
+                            price: product.price,
+                            image: product.image,
+                            rating: product.rating,
+                            category: product.category,
+                          })
+                        }
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
