@@ -12,7 +12,7 @@ export default function Experiences() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
           {/* Left: image */}
-          <div className="aspect-[4/3] w-full overflow-hidden rounded-2xl relative">
+          <div className="aspect-[4/3] w-full overflow-hidden rounded-3xl relative order-2 lg:order-1">
             <Image
               src="/img/furniture/img-exper.png"
               alt="Experience showcase"
@@ -22,37 +22,33 @@ export default function Experiences() {
           </div>
 
           {/* Right: content */}
-          <div>
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-primary">
+          <div className="order-1 lg:order-2">
+            <p className="mb-4 text-sm font-bold uppercase tracking-widest text-primary">
               Experiences
             </p>
-            <h2 className="mb-6 font-heading text-3xl font-normal leading-tight text-secondary md:text-4xl lg:text-[40px]">
-              We provide you the
-              <br className="hidden lg:block" />
-              best experience
+            <h2 className="mb-6 font-heading text-4xl font-normal leading-tight text-secondary md:text-5xl lg:text-5xl">
+              We Provide You The
+              <br />
+              Best Experience
             </h2>
-            <p className="mb-8 text-sm leading-relaxed text-gray-500">
-              We ensure that you receive the best possible experience with our
-              furniture. From initial design consultation to delivery and setup,
-              our team is dedicated to making every step seamless and enjoyable.
+            <p className="mb-8 text-base leading-relaxed text-gray-600">
+              You don&apos;t have to worry about the result because all of these
+              interiors are made by people who are professionals in their fields
+              with an elegant and lucurious style and with premium quality
+              materials
             </p>
 
-            {/* Stats */}
-            <div className="flex flex-wrap gap-10">
-              {stats.map((stat) => (
-                <div key={stat.label}>
-                  <p className="text-3xl font-bold text-primary">{stat.value}</p>
-                  <p className="text-sm text-gray-500">{stat.label}</p>
-                </div>
-              ))}
-            </div>
-
-            <button className="mt-8 rounded-full bg-primary px-8 py-3 text-sm font-semibold text-white transition-colors hover:bg-primary/90">
+            {/* More Info link */}
+            <a href="#" className="inline-flex items-center gap-3 text-base font-medium text-primary hover:underline">
               More Info
-            </button>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="h-5 w-5">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14m0 0l-6-6m6 6l-6 6" />
+              </svg>
+            </a>
           </div>
         </div>
       </div>
     </section>
   );
 }
+
