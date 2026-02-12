@@ -7,27 +7,32 @@ export default function Materials() {
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
           {/* Left: content */}
           <div>
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-primary">
+            <p className="mb-4 text-sm font-bold uppercase tracking-widest text-primary">
               Materials
             </p>
-            <h2 className="mb-6 font-heading text-3xl font-normal leading-tight text-secondary md:text-4xl lg:text-[40px]">
-              Very serious materials
-              <br className="hidden lg:block" />
-              for making furniture
+            <h2 className="mb-6 font-heading text-4xl font-normal leading-tight text-secondary md:text-5xl">
+              Very Serious
+              <br />
+              Materials For Making
+              <br />
+              Furniture
             </h2>
-            <p className="mb-8 text-sm leading-relaxed text-gray-500">
-              We source only the highest quality materials for our furniture. From
-              sustainably harvested hardwoods to premium upholstery fabrics, every
-              component is carefully selected to ensure durability and beauty.
+            <p className="mb-8 text-base leading-relaxed text-gray-600">
+              Because panto was very serious about designing furniture for our
+              environment, using a very expensive and famous capital but at a
+              relatively low price
             </p>
-            <button className="rounded-full bg-primary px-8 py-3 text-sm font-semibold text-white transition-colors hover:bg-primary/90">
+            <a href="#" className="inline-flex items-center gap-3 text-base font-medium text-primary hover:underline">
               More Info
-            </button>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="h-5 w-5">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14m0 0l-6-6m6 6l-6 6" />
+              </svg>
+            </a>
           </div>
 
-          {/* Right: image grid */}
-          <div className="grid grid-cols-2 gap-4">
-            <div className="aspect-square overflow-hidden rounded-2xl relative">
+          {/* Right: image layout */}
+          <div className="grid grid-cols-2 gap-6 items-start">
+            <div className="col-span-1 row-span-2 aspect-[3/4] overflow-hidden rounded-3xl relative order-2">
               <Image
                 src="/img/furniture/img-material.png"
                 alt="Material sample 1"
@@ -35,7 +40,7 @@ export default function Materials() {
                 className="object-cover"
               />
             </div>
-            <div className="aspect-square overflow-hidden rounded-2xl relative">
+            <div className="col-span-1 aspect-square overflow-hidden rounded-3xl relative order-1">
               <Image
                 src="/img/furniture/img-material1.png"
                 alt="Material sample 2"
@@ -43,18 +48,10 @@ export default function Materials() {
                 className="object-cover"
               />
             </div>
-            <div className="aspect-square overflow-hidden rounded-2xl relative">
+            <div className="col-span-1 aspect-square overflow-hidden rounded-3xl relative order-3">
               <Image
                 src="/img/furniture/img-material2.png"
                 alt="Material sample 3"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="aspect-square overflow-hidden rounded-2xl relative">
-              <Image
-                src="/img/furniture/img-exper.png"
-                alt="Material sample 4"
                 fill
                 className="object-cover"
               />
