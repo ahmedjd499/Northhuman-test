@@ -35,48 +35,49 @@ export default function WhyChooseUs() {
   return (
     <section className="bg-white py-16 lg:py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-20">
+        <div className="grid gap-12 lg:grid-cols-4 lg:gap-16">
           {/* Left: heading */}
-          <div className="flex flex-col justify-center">
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-primary">
-              Why Choosing Us
-            </p>
-            <h2 className="font-heading text-3xl font-normal leading-tight text-secondary md:text-4xl lg:text-[40px]">
-              We provide you the
-              <br className="hidden lg:block" />
-              best experience
+          <div className="lg:col-span-1">
+            <h2 className="font-heading text-3xl font-semibold leading-tight text-secondary md:text-4xl">
+              Why
+              Choosing Us
             </h2>
           </div>
 
-          {/* Right: feature cards */}
-          <div className="flex flex-col gap-4">
-            {features.map((feature) => (
-              <div
-                key={feature.title}
-                className="flex gap-4 rounded-lg border border-gray-100 bg-white p-4 shadow-sm transition-shadow hover:shadow-md"
-              >
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                  {feature.icon}
-                </div>
-                <div>
-                  <h3 className="mb-1 text-base font-semibold text-secondary">
+          {/* Right: features */}
+          <div className="lg:col-span-3">
+            <div className="grid gap-10 md:grid-cols-3">
+              {features.map((feature) => (
+                <div key={feature.title}>
+                  <h3 className="mb-3 text-lg font-semibold text-secondary">
                     {feature.title}
                   </h3>
-                  <p className="mb-2 text-sm leading-relaxed text-gray-500">
+                  <p className="mb-6 text-sm leading-7 text-gray-500">
                     {feature.description}
                   </p>
                   <a
                     href="#"
-                    className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline"
+                    className="inline-flex items-center gap-3 text-sm font-medium text-primary"
                   >
                     More Info
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="h-4 w-4">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={2}
+                      stroke="currentColor"
+                      className="h-4 w-4"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M4.5 12h15m0 0l-6-6m6 6l-6 6"
+                      />
                     </svg>
                   </a>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>
