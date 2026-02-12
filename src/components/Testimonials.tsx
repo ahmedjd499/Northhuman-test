@@ -48,8 +48,8 @@ export default function Testimonials() {
             <div
               key={t.name}
               className={`rounded-2xl border p-6 transition-all cursor-pointer ${active === i
-                  ? "border-primary bg-primary/5 shadow-md"
-                  : "border-gray-100 bg-white shadow-sm hover:shadow-md"
+                ? "border-primary bg-primary/5 shadow-md"
+                : "border-gray-100 bg-white shadow-sm hover:shadow-md"
                 }`}
               onClick={() => setActive(i)}
               role="button"
