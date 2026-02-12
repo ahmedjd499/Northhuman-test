@@ -23,7 +23,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-black/30" />
 
       {/* Bottom gradient fade */}
-      <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/50 to-transparent" />
+      <div className="absolute inset-x-0 bottom-0 h-32 bg-linear-to-t from-black/50 to-transparent" />
 
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
