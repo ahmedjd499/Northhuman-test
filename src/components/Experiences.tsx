@@ -1,10 +1,6 @@
 import Image from "next/image";
 
-const stats = [
-  { value: "20+", label: "Years Experience" },
-  { value: "483", label: "Happy Client" },
-  { value: "150+", label: "Project Finished" },
-];
+
 
 export default function Experiences() {
   return (
