@@ -1,51 +1,53 @@
+import Image from "next/image";
+
 const products = [
   {
     name: "Warm Lamp",
     price: "$199",
     rating: 4.8,
-    gradient: "linear-gradient(135deg, #d4a574 0%, #c4956a 50%, #b8865c 100%)",
+    image: "/img/shop/img-chair1.png",
   },
   {
     name: "Cool Chair",
     price: "$299",
     rating: 4.9,
-    gradient: "linear-gradient(135deg, #8B7355 0%, #6B5B3E 50%, #5A4A32 100%)",
+    image: "/img/shop/img-chair2.png",
   },
   {
     name: "Mini Table",
     price: "$149",
     rating: 4.7,
-    gradient: "linear-gradient(135deg, #C4A882 0%, #A68B5B 50%, #8B7248 100%)",
+    image: "/img/shop/img-chair3.png",
   },
   {
     name: "Modern Sofa",
     price: "$499",
     rating: 5.0,
-    gradient: "linear-gradient(135deg, #7B6B5A 0%, #5C4E3D 50%, #4A3F30 100%)",
+    image: "/img/shop/img-chair4.png",
   },
   {
     name: "Wooden Shelf",
     price: "$179",
     rating: 4.6,
-    gradient: "linear-gradient(135deg, #A0522D 0%, #8B4513 50%, #6B3410 100%)",
+    image: "/img/shop/img-chair1.png",
   },
   {
     name: "Classic Desk",
     price: "$349",
     rating: 4.8,
-    gradient: "linear-gradient(135deg, #D2B48C 0%, #BC9E72 50%, #A58858 100%)",
+    image: "/img/shop/img-chair2.png",
   },
   {
     name: "Floor Vase",
     price: "$89",
     rating: 4.5,
-    gradient: "linear-gradient(135deg, #E8D5B7 0%, #D4BFA0 50%, #C0A988 100%)",
+    image: "/img/shop/img-chair3.png",
   },
   {
     name: "Accent Chair",
     price: "$259",
     rating: 4.9,
-    gradient: "linear-gradient(135deg, #9B8B7A 0%, #7D6E5D 50%, #635545 100%)",
+    image: "/img/shop/img-chair4.png",
   },
 ];
 
@@ -91,11 +93,15 @@ export default function Products() {
               key={product.name}
               className="group cursor-pointer overflow-hidden rounded-2xl bg-white shadow-sm transition-shadow hover:shadow-lg"
             >
-              {/* Product image placeholder */}
-              <div
-                className="aspect-square w-full transition-transform duration-300 group-hover:scale-105"
-                style={{ background: product.gradient }}
-              />
+              {/* Product image */}
+              <div className="aspect-square w-full overflow-hidden transition-transform duration-300 group-hover:scale-105 relative">
+                <Image
+                  src={product.image}
+                  alt={product.name}
+                  fill
+                  className="object-cover"
+                />
+              </div>
               <div className="p-4">
                 <h3 className="mb-1 text-sm font-semibold text-secondary">
                   {product.name}

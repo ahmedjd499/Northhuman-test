@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Materials() {
   return (
     <section className="bg-secondary-bg py-20 lg:py-28">
@@ -23,36 +25,40 @@ export default function Materials() {
             </button>
           </div>
 
-          {/* Right: image grid placeholder */}
+          {/* Right: image grid */}
           <div className="grid grid-cols-2 gap-4">
-            <div
-              className="aspect-square overflow-hidden rounded-2xl"
-              style={{
-                background:
-                  "linear-gradient(135deg, #A0522D 0%, #8B4513 100%)",
-              }}
-            />
-            <div
-              className="aspect-square overflow-hidden rounded-2xl"
-              style={{
-                background:
-                  "linear-gradient(135deg, #D2B48C 0%, #BC9E72 100%)",
-              }}
-            />
-            <div
-              className="aspect-square overflow-hidden rounded-2xl"
-              style={{
-                background:
-                  "linear-gradient(135deg, #5a3a2a 0%, #3d2317 100%)",
-              }}
-            />
-            <div
-              className="aspect-square overflow-hidden rounded-2xl"
-              style={{
-                background:
-                  "linear-gradient(135deg, #C4A882 0%, #8B7355 100%)",
-              }}
-            />
+            <div className="aspect-square overflow-hidden rounded-2xl relative">
+              <Image
+                src="/img/furniture/img-material.png"
+                alt="Material sample 1"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="aspect-square overflow-hidden rounded-2xl relative">
+              <Image
+                src="/img/furniture/img-material1.png"
+                alt="Material sample 2"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="aspect-square overflow-hidden rounded-2xl relative">
+              <Image
+                src="/img/furniture/img-material2.png"
+                alt="Material sample 3"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="aspect-square overflow-hidden rounded-2xl relative">
+              <Image
+                src="/img/furniture/img-exper.png"
+                alt="Material sample 4"
+                fill
+                className="object-cover"
+              />
+            </div>
           </div>
         </div>
       </div>

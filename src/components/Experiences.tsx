@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const stats = [
   { value: "20+", label: "Years Experience" },
   { value: "483", label: "Happy Client" },
@@ -9,14 +11,15 @@ export default function Experiences() {
     <section id="experiences" className="bg-white py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
-          {/* Left: image placeholder */}
-          <div
-            className="aspect-[4/3] w-full overflow-hidden rounded-2xl"
-            style={{
-              background:
-                "linear-gradient(145deg, #3d2317 0%, #5a3a2a 40%, #8B6914 70%, #4a2c20 100%)",
-            }}
-          />
+          {/* Left: image */}
+          <div className="aspect-[4/3] w-full overflow-hidden rounded-2xl relative">
+            <Image
+              src="/img/furniture/img-exper.png"
+              alt="Experience showcase"
+              fill
+              className="object-cover"
+            />
+          </div>
 
           {/* Right: content */}
           <div>

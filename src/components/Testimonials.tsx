@@ -1,25 +1,29 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 const testimonials = [
   {
     name: "Sarah Johnson",
     role: "Interior Designer",
-    text: "Panto furniture completely transformed my clients\u2019 living spaces. The quality is exceptional and the designs are timeless. Highly recommended!",
+    text: "Panto furniture completely transformed my clients' living spaces. The quality is exceptional and the designs are timeless. Highly recommended!",
     color: "#E58411",
+    image: "/img/testi/person1.png",
   },
   {
     name: "Michael Chen",
     role: "Homeowner",
-    text: "The best furniture shopping experience I\u2019ve ever had. From browsing to delivery, everything was seamless. The sofa we got is absolutely stunning.",
+    text: "The best furniture shopping experience I've ever had. From browsing to delivery, everything was seamless. The sofa we got is absolutely stunning.",
     color: "#8B6914",
+    image: "/img/testi/person2.png",
   },
   {
     name: "Emily Roberts",
     role: "Architect",
     text: "I always recommend Panto to my clients. Their attention to detail and commitment to quality materials sets them apart from the competition.",
     color: "#5a3a2a",
+    image: "/img/testi/person3.png",
   },
 ];
 
@@ -43,11 +47,10 @@ export default function Testimonials() {
           {testimonials.map((t, i) => (
             <div
               key={t.name}
-              className={`rounded-2xl border p-6 transition-all cursor-pointer ${
-                active === i
+              className={`rounded-2xl border p-6 transition-all cursor-pointer ${active === i
                   ? "border-primary bg-primary/5 shadow-md"
                   : "border-gray-100 bg-white shadow-sm hover:shadow-md"
-              }`}
+                }`}
               onClick={() => setActive(i)}
               role="button"
               tabIndex={0}
@@ -56,11 +59,13 @@ export default function Testimonials() {
             >
               {/* Avatar */}
               <div className="mb-4 flex items-center gap-3">
-                <div
-                  className="flex h-11 w-11 items-center justify-center rounded-full text-base font-bold text-white"
-                  style={{ backgroundColor: t.color }}
-                >
-                  {t.name.charAt(0)}
+                <div className="h-11 w-11 overflow-hidden rounded-full relative">
+                  <Image
+                    src={t.image}
+                    alt={t.name}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
                 <div>
                   <p className="text-sm font-semibold text-secondary">
@@ -100,9 +105,8 @@ export default function Testimonials() {
             <button
               key={i}
               aria-label={`Go to testimonial ${i + 1}`}
-              className={`h-2.5 rounded-full transition-all ${
-                active === i ? "w-8 bg-primary" : "w-2.5 bg-gray-300"
-              }`}
+              className={`h-2.5 rounded-full transition-all ${active === i ? "w-8 bg-primary" : "w-2.5 bg-gray-300"
+                }`}
               onClick={() => setActive(i)}
             />
           ))}

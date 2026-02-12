@@ -1,26 +1,23 @@
+import Image from "next/image";
+
 export default function Hero() {
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
-      {/* Background image placeholder - dark furniture room scene */}
-      <div
-        className="absolute inset-0"
-        style={{
-          background:
-            "linear-gradient(160deg, #1a0e0a 0%, #2c1810 20%, #4a2c20 40%, #3d2317 60%, #2c1810 80%, #1a0e0a 100%)",
-        }}
-      />
+      {/* Background image */}
+      <div className="absolute inset-0 -z-10">
+        <Image
+          src="/img/background/bg-hero.jpg"
+          alt="Hero background"
+          fill
+          className="object-cover"
+          priority
+        />
+      </div>
 
-      {/* Subtle furniture silhouette overlay */}
-      <div
-        className="absolute inset-0 opacity-30"
-        style={{
-          background:
-            "radial-gradient(ellipse at 30% 60%, #5a3a2a 0%, transparent 50%), radial-gradient(ellipse at 70% 50%, #4a2c20 0%, transparent 40%)",
-        }}
-      />
-
-      {/* Overlay for better text readability */}
-      <div className="absolute inset-0 bg-black/30" />
+      {/* Overlay for better readability */}
+      <div className="absolute inset-0" style={{
+        background: "linear-gradient(160deg, rgba(26, 14, 10, 0.7) 0%, rgba(44, 24, 16, 0.7) 20%, rgba(74, 44, 32, 0.7) 40%, rgba(61, 35, 23, 0.7) 60%, rgba(44, 24, 16, 0.7) 80%, rgba(26, 14, 10, 0.7) 100%)",
+      }} />
 
       {/* Bottom gradient fade */}
       <div className="absolute inset-x-0 bottom-0 h-32 bg-linear-to-t from-black/50 to-transparent" />
