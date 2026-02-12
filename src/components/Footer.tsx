@@ -14,7 +14,7 @@ export default function Footer() {
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div>
-            <h3 className="mb-4 text-2xl font-bold">Panto</h3>
+            <h3 className="mb-4 font-heading text-2xl font-normal">Panto</h3>
             <p className="text-sm leading-relaxed text-gray-400">
               Making your interior more minimalistic and modern with our curated
               furniture collection. Quality craftsmanship since 2003.
@@ -23,7 +23,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="mb-4 text-sm font-semibold uppercase tracking-widest">
+            <h4 className="mb-4 text-sm font-semibold uppercase tracking-[0.2em]">
               Quick Links
             </h4>
             <ul className="space-y-3">
@@ -42,7 +42,7 @@ export default function Footer() {
 
           {/* Customer Care */}
           <div>
-            <h4 className="mb-4 text-sm font-semibold uppercase tracking-widest">
+            <h4 className="mb-4 text-sm font-semibold uppercase tracking-[0.2em]">
               Customer Care
             </h4>
             <ul className="space-y-3">
@@ -61,7 +61,7 @@ export default function Footer() {
 
           {/* Follow Us */}
           <div>
-            <h4 className="mb-4 text-sm font-semibold uppercase tracking-widest">
+            <h4 className="mb-4 text-sm font-semibold uppercase tracking-[0.2em]">
               Follow Us
             </h4>
             <ul className="space-y-3">

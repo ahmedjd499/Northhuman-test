@@ -51,14 +51,14 @@ const products = [
 
 function StarRating({ rating }: { rating: number }) {
   return (
-    <div className="flex items-center gap-1" role="img" aria-label={`Rated ${rating} out of 5 stars`}>
+    <div className="flex items-center gap-0.5" role="img" aria-label={`Rated ${rating} out of 5 stars`}>
       {[1, 2, 3, 4, 5].map((star) => (
         <svg
           key={star}
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill={star <= Math.round(rating) ? "#E58411" : "#E5E7EB"}
-          className="h-4 w-4"
+          className="h-3.5 w-3.5"
         >
           <path
             fillRule="evenodd"
@@ -67,7 +67,7 @@ function StarRating({ rating }: { rating: number }) {
           />
         </svg>
       ))}
-      <span className="ml-1 text-xs text-gray-500">{rating}</span>
+      <span className="ml-1 text-xs text-gray-400">{rating}</span>
     </div>
   );
 }
@@ -76,16 +76,16 @@ export default function Products() {
   return (
     <section id="products" className="bg-secondary-bg py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mb-12 text-center">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary">
+        <div className="mb-14 text-center">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-primary">
             Our Products
           </p>
-          <h2 className="text-3xl font-bold text-secondary md:text-4xl">
+          <h2 className="font-heading text-3xl font-normal text-secondary md:text-4xl">
             Best Selling Products
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-6 lg:grid-cols-4">
           {products.map((product) => (
             <div
               key={product.name}
@@ -97,11 +97,11 @@ export default function Products() {
                 style={{ background: product.gradient }}
               />
               <div className="p-4">
-                <h3 className="mb-1 text-base font-semibold text-secondary">
+                <h3 className="mb-1 text-sm font-semibold text-secondary">
                   {product.name}
                 </h3>
                 <StarRating rating={product.rating} />
-                <p className="mt-2 text-lg font-bold text-primary">
+                <p className="mt-2 text-base font-bold text-primary">
                   {product.price}
                 </p>
               </div>
