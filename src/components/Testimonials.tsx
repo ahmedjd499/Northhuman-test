@@ -57,6 +57,7 @@ export default function Testimonials() {
               onClick={() => setActive(i)}
               role="button"
               tabIndex={0}
+              aria-pressed={active === i}
               onKeyDown={(e) => e.key === "Enter" && setActive(i)}
             >
               {/* Avatar */}
