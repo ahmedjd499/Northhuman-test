@@ -87,11 +87,11 @@ export default function Products() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-2 gap-6 lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-4 md:gap-5 lg:grid-cols-4">
           {products.map((product) => (
             <div
               key={product.name}
-              className="group cursor-pointer overflow-hidden rounded-2xl bg-white shadow-sm transition-shadow hover:shadow-lg"
+              className="group cursor-pointer overflow-hidden rounded-2xl bg-white shadow-sm transition-shadow hover:shadow-md"
             >
               {/* Product image */}
               <div className="aspect-square w-full overflow-hidden transition-transform duration-300 group-hover:scale-105 relative">
@@ -102,12 +102,12 @@ export default function Products() {
                   className="object-cover"
                 />
               </div>
-              <div className="p-4">
-                <h3 className="mb-1 text-sm font-semibold text-secondary">
+              <div className="p-3 md:p-4">
+                <h3 className="mb-2 text-xs md:text-sm font-semibold text-secondary">
                   {product.name}
                 </h3>
                 <StarRating rating={product.rating} />
-                <p className="mt-2 text-base font-bold text-primary">
+                <p className="mt-2 text-sm md:text-base font-bold text-primary">
                   {product.price}
                 </p>
               </div>

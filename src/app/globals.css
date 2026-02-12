@@ -3,9 +3,9 @@
 @theme inline {
   --color-primary: #E58411;
   --color-secondary: #1E1E1E;
-  --color-secondary-bg: #F7F7F7;
-  --font-heading: 'DM Serif Display', Georgia, 'Times New Roman', serif;
-  --font-body: 'DM Sans', system-ui, -apple-system, sans-serif;
+  --color-secondary-bg: #FAFAFA;
+  --font-heading: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
 html {
@@ -18,6 +18,9 @@ body {
   color: #1E1E1E;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: var(--font-heading);
+  font-weight: 700;
 }

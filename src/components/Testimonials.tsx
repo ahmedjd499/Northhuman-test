@@ -31,7 +31,7 @@ export default function Testimonials() {
   const [active, setActive] = useState(0);
 
   return (
-    <section className="bg-white py-20 lg:py-28">
+    <section className="bg-white py-16 lg:py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mb-14 text-center">
           <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-primary">
@@ -43,11 +43,11 @@ export default function Testimonials() {
         </div>
 
         {/* Cards */}
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {testimonials.map((t, i) => (
             <div
               key={t.name}
-              className={`rounded-2xl border p-6 transition-all cursor-pointer ${active === i
+              className={`rounded-xl border p-5 transition-all cursor-pointer ${active === i
                 ? "border-primary bg-primary/5 shadow-md"
                 : "border-gray-100 bg-white shadow-sm hover:shadow-md"
                 }`}

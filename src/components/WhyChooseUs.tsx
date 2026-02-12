@@ -33,7 +33,7 @@ const features = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="bg-white py-20 lg:py-28">
+    <section className="bg-white py-16 lg:py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-20">
           {/* Left: heading */}
@@ -49,13 +49,13 @@ export default function WhyChooseUs() {
           </div>
 
           {/* Right: feature cards */}
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-4">
             {features.map((feature) => (
               <div
                 key={feature.title}
-                className="flex gap-5 rounded-xl border border-gray-100 bg-white p-5 shadow-sm transition-shadow hover:shadow-md"
+                className="flex gap-4 rounded-lg border border-gray-100 bg-white p-4 shadow-sm transition-shadow hover:shadow-md"
               >
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
                   {feature.icon}
                 </div>
                 <div>

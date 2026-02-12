@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Materials() {
   return (
-    <section className="bg-secondary-bg py-20 lg:py-28">
+    <section className="bg-secondary-bg py-16 lg:py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
           {/* Left: content */}
