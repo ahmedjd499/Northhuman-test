@@ -24,3 +24,12 @@ h3 {
   font-family: var(--font-heading);
   font-weight: 700;
 }
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
