@@ -30,15 +30,20 @@ export default function Navbar() {
 
         {/* Desktop Nav */}
         <ul className="hidden items-center gap-8 md:flex">
-          {["Furniture", "Shop", "About Us", "Contact"].map((item) => (
-            <li key={item}>
+          {[
+            { label: "Furniture", href: "#products" },
+            { label: "Shop", href: "#products" },
+            { label: "About Us", href: "#experiences" },
+            { label: "Contact", href: "#footer" },
+          ].map((item) => (
+            <li key={item.label}>
               <a
-                href="#"
+                href={item.href}
                 className={`text-sm font-medium transition-colors hover:text-primary ${
                   scrolled ? "text-secondary" : "text-white"
                 }`}
               >
-                {item}
+                {item.label}
               </a>
             </li>
           ))}
@@ -96,14 +101,19 @@ export default function Navbar() {
       {menuOpen && (
         <div className="bg-white px-6 pb-4 shadow-md md:hidden">
           <ul className="flex flex-col gap-4">
-            {["Furniture", "Shop", "About Us", "Contact"].map((item) => (
-              <li key={item}>
+            {[
+              { label: "Furniture", href: "#products" },
+              { label: "Shop", href: "#products" },
+              { label: "About Us", href: "#experiences" },
+              { label: "Contact", href: "#footer" },
+            ].map((item) => (
+              <li key={item.label}>
                 <a
-                  href="#"
+                  href={item.href}
                   className="text-sm font-medium text-secondary transition-colors hover:text-primary"
                   onClick={() => setMenuOpen(false)}
                 >
-                  {item}
+                  {item.label}
                 </a>
               </li>
             ))}

@@ -51,7 +51,7 @@ const products = [
 
 function StarRating({ rating }: { rating: number }) {
   return (
-    <div className="flex items-center gap-1">
+    <div className="flex items-center gap-1" role="img" aria-label={`Rated ${rating} out of 5 stars`}>
       {[1, 2, 3, 4, 5].map((star) => (
         <svg
           key={star}
@@ -74,7 +74,7 @@ function StarRating({ rating }: { rating: number }) {
 
 export default function Products() {
   return (
-    <section className="bg-secondary-bg py-20 lg:py-28">
+    <section id="products" className="bg-secondary-bg py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mb-12 text-center">
           <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary">
