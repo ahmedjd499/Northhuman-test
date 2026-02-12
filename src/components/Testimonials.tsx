@@ -17,7 +17,7 @@ const testimonials = [
     role: "Ibu Rumah Tangga",
     text: "Makasih Panto, aku sekarang beragal tinggal di apartment karena barang-barang yang terlihat mewah",
     image: "/img/testi/person2.png",
-    bg: "/img/testi/bg-testi1.png",
+    bg: "/img/testi/bg-testi2.png",
     rating: 4,
   },
   {
@@ -25,7 +25,7 @@ const testimonials = [
     role: "Karyawan Swasta",
     text: "Sangat terjangkau untuk kantong saya yang tidak terlalu banyak",
     image: "/img/testi/person3.png",
-    bg: "/img/testi/bg-testi1.png",
+    bg: "/img/testi/bg-testi3.png",
     rating: 4,
   },
   {
@@ -114,7 +114,7 @@ export default function Testimonials() {
           {/* Navigation Buttons */}
           <button
             aria-label="Previous testimonial"
-            className="absolute left-1 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white p-3 text-secondary shadow-md lg:-left-8"
+            className="absolute left-1 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white p-3 text-secondary shadow-md lg:-left-8 cursor-pointer"
             type="button"
             onClick={goPrev}
           >
@@ -125,7 +125,7 @@ export default function Testimonials() {
 
           <button
             aria-label="Next testimonial"
-            className="absolute right-1 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white p-3 text-secondary shadow-md lg:-right-8"
+            className="absolute right-1 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white p-3 text-secondary shadow-md lg:-right-8 cursor-pointer"
             type="button"
             onClick={goNext}
           >

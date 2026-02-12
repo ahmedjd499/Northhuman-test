@@ -182,7 +182,7 @@ export default function Products() {
         <div className="relative">
           <button
             aria-label="Previous products"
-            className="absolute left-1 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white p-3 text-secondary shadow-md lg:-left-8"
+            className="absolute left-1 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white p-3 text-secondary shadow-md lg:-left-8 cursor-pointer"
             type="button"
             onClick={goPrev}
           >
@@ -193,7 +193,7 @@ export default function Products() {
 
           <button
             aria-label="Next products"
-            className="absolute right-1 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white p-3 text-secondary shadow-md lg:-right-8"
+            className="absolute right-1 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white p-3 text-secondary shadow-md lg:-right-8 cursor-pointer"
             type="button"
             onClick={goNext}
           >
