@@ -84,9 +84,7 @@ export default function Footer() {
                       </svg>
                     )}
                     {social.icon === "instagram" && (
-                      <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0m5.521 17.708c-1.445 2.537-4.158 4.292-7.521 4.292-4.697 0-8.5-3.803-8.5-8.5s3.803-8.5 8.5-8.5c3.362 0 6.076 1.755 7.521 4.292H12.5V6.5h6v10.208z" />
-                      </svg>
+                      <svg className="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8A4 4 0 0 1 16 11.37m1.5-4.87h.01" /></svg>
                     )}
                     {social.name}
                   </a>
